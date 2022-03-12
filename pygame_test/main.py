@@ -1,12 +1,15 @@
 import pygame
 from player import Player
 
+WIDTH = 800
+HEIGHT = 600
+
 pygame.init()
-screen = pygame.display.set_mode((800, 600))
+screen = pygame.display.set_mode((WIDTH, HEIGHT))
 pygame.display.set_caption("Моя игра")
 
 all_sprites = pygame.sprite.Group()
-player = Player()
+player = Player(WIDTH, HEIGHT)
 all_sprites.add(player)
 
 clock = pygame.time.Clock()
