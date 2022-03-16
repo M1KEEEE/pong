@@ -25,6 +25,7 @@ class Player(pygame.sprite.Sprite):
 		self.is_auto = is_auto
 		self.key_down = key_down
 		self.key_up = key_up
+		self.velocity = velocity
 	
 # рисование игрока
 	def draw(self):
@@ -36,4 +37,6 @@ class Player(pygame.sprite.Sprite):
 			pass
 		else:
 			if keys[self.key_up]:
-				print("вверх")
+				self.rect.y -= self.velocity
+			if keys[self.key_down]:
+				self.rect.y += self.velocity
