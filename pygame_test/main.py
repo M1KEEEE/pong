@@ -15,20 +15,20 @@ opponent = Player(screen, centerx=700, is_auto=True)
 clock = pygame.time.Clock()
 
 while True: 
-	screen.fill((0, 0, 0))
+    screen.fill((0, 0, 0))
 
-	for event in pygame.event.get():
-		if event.type == pygame.QUIT:
-			pygame.quit()
+    for event in pygame.event.get():
+        if event.type == pygame.QUIT:
+            pygame.quit()
 
-	keys = pygame.key.get_pressed()
+    keys = pygame.key.get_pressed()
 
 # вызов функций
-	player.draw()
-	player.control(keys)
-	opponent.draw()
-	opponent.control(keys)
-	pygame.display.flip()
-	clock.tick(60)
+    player.draw()
+    player.control(keys)
+    opponent.draw()
+    opponent.control(keys)
+    pygame.display.flip()
+    clock.tick(60)
 
 pygame.quit()
