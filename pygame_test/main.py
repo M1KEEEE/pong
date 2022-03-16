@@ -1,5 +1,6 @@
 import pygame
 from player import Player
+import ball
 
 
 # настройки экрана
@@ -28,6 +29,7 @@ while True:
     player.control(keys)
     opponent.draw()
     opponent.control(keys)
+    ball.draw()
     pygame.display.flip()
     clock.tick(60)
 

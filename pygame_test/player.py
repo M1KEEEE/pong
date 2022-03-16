@@ -28,8 +28,8 @@ class Player(pygame.sprite.Sprite):
         self.velocity = velocity
     
 # рисование игрока
-    def draw(self):
-        self.screen.blit(self.image, self.rect)
+        def draw(self):
+            self.screen.blit(self.image, self.rect)
 
 # управление
     def control(self, keys):
